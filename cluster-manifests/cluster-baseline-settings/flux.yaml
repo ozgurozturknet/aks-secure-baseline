@@ -70,8 +70,8 @@ spec:
         # one deployed along side of this reference implementation.
         # az acr import --source docker.io/fluxcd/flux:1.21.1 -n <your-acr-instance-name>
         # and then set this to
-        # image: <your-acr-instance-name>.azurecr.io/fluxcd/flux:1.21.1
-        image: docker.io/fluxcd/flux:1.21.1
+        # image: acraksyvga6y7wnk7d4.azurecr.io/fluxcd/flux:1.21.1
+        image: acraksyvga6y7wnk7d4.azurecr.io/fluxcd/flux:1.21.1
         imagePullPolicy: IfNotPresent
         securityContext:
           capabilities:
@@ -105,7 +105,7 @@ spec:
           initialDelaySeconds: 5
           timeoutSeconds: 5
         args:
-        - --git-url=https://github.com/mspnp/aks-secure-baseline.git
+        - --git-url=https://github.com/ozgurozturknet/aks-secure-baseline.git
         - --git-branch=main
         - --git-path=cluster-manifests
         # this configuration prevents flux from syncing changes from your cluster to the git repo. If two way sync is required, please take a look at  https://docs.fluxcd.io/en/1.19.0/tutorials/get-started/#giving-write-access
@@ -151,8 +151,8 @@ spec:
         # one deployed along side of this reference implementation.
         # az acr import --source docker.io/library/memcached:1.5.20 -n <your-acr-instance-name>
         # and then set this to
-        # image: <your-acr-instance-name>.azurecr.io/library/memcached:1.5.20
-        image: docker.io/library/memcached:1.5.20
+        # image: acraksyvga6y7wnk7d4.azurecr.io/library/memcached:1.5.20
+        image: acraksyvga6y7wnk7d4.azurecr.io/library/memcached:1.5.20
         imagePullPolicy: IfNotPresent
         resources:
           requests:
